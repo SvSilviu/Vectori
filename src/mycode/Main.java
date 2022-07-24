@@ -8,8 +8,8 @@ public class Main {
 
           int []vect1={12,34,54,65,7,87,87,34};
 
-        //  afisare(vect1);
-        System.out.println(numerePare(vect1));
+          afisare(vect1);
+        System.out.println("Numerele pare din lista sunt: "+numerePare(vect1));
 
     }
 }
