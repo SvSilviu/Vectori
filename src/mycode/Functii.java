@@ -4,7 +4,7 @@ public class Functii {
 
 
     public static void declaratie() {
-        int[] x = {17, -1, 25, 31, 34, 56, 7, 6, 34};// are dimensiuena 4 dar ultima pozitie =3
+        int[] x = {17, -1, 25, 31, 34, 56, 7, 6, 34};// are dimensiuena 9 dar ultima pozitie =8
         String[] y = {"Ana", "are", "mere"};
         double[] z = {21.5, 37.2, 19.7};
         //todo:Accesare
