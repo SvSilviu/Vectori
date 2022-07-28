@@ -155,6 +155,8 @@ public class Functii {
     //TODO:Se citește un vector cu n elemente, numere naturale.
     // Să se determine câte elemente ale vectorului sunt egale cu diferența dintre cea mai mare și cea mai mică valoare din vector.
 
+
+    //TODO:Să se determine maximul şi minimul valorilor elementelor unui vector.
     public static int celMaiMareNumar(int[] arr) {
         int nrMax = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -186,10 +188,36 @@ public class Functii {
         }
         return contor;
     }
+//TODO: Se dă un șir cu n elemente, numere reale. Să se determine câte dintre elemente se află în afara intervalului închis determinat de primul și ultimul element.
+
+    public static int elementInterval(int[] numar) {
+        int contor = 0;
+        for (int i = 0; i < numar.length; i++) {
+            System.out.println(numar[i] + " ");
+
+            if (i > numar[0] && i < numar[7]) {
+                contor++;
+            }
+        }
+        return contor;
+    }
+
+//  NU E REZULTATUL DORIT
 
 
-
+    //TODO: Se dă un vector x cu n elemente, numere naturale. Să se construiască un alt vector, y, care să conțină elementele prime din x, în ordine inversă.
+//
+//    public static int vector2(int[] arr) {
+//
+//        for (int i = arr.length; i > 0; i--) {
+//
+//            System.out.println(arr[i]);
+//        }
+//        return 0;
+//    }
 }
+
+
 
 
 
