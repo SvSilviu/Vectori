@@ -190,32 +190,125 @@ public class Functii {
     }
 //TODO: Se dă un șir cu n elemente, numere reale. Să se determine câte dintre elemente se află în afara intervalului închis determinat de primul și ultimul element.
 
-    public static int elementInterval(int[] numar) {
-        int contor = 0;
-        for (int i = 0; i < numar.length; i++) {
-            System.out.println(numar[i] + " ");
+    //todo functie ce primeste ca parametru 2 numere si returneaza numarul mai mare
 
-            if (i > numar[0] && i < numar[7]) {
+    public static int maxim(int a, int b) {
+        if (a < b) {
+
+            return b;
+        }
+
+        return a;
+    }
+
+    public static int minim(int a, int b) {
+        if (a < b) {
+            return a;
+        }
+        return b;
+    }
+
+    public static int elementInterval(int[] arr) {
+        int contor = 0;
+        int primul = arr[0];
+        int ultimul = arr[arr.length - 1];
+        int min = minim(primul, ultimul);
+        int max = maxim(primul, ultimul);
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] <= max && arr[i] >= min) {
                 contor++;
             }
         }
         return contor;
     }
 
-//  NU E REZULTATUL DORIT
+
+    //TODO: Se dă un vector x cu n elemente, numere naturale. Să se construiască un alt vector, y, care să conțină elementele pare din x;
+
+    public static int[] elementePare(int[] arr) {
+
+        int[] nou = new int[numerePare(arr)];
+        int pozitie = 0;
+        for (int i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] % 2 == 0) {
+                nou[pozitie] = arr[i];
+                pozitie++;
+            }
+        }
+
+        return nou;
 
 
-    //TODO: Se dă un vector x cu n elemente, numere naturale. Să se construiască un alt vector, y, care să conțină elementele prime din x, în ordine inversă.
-//
-//    public static int vector2(int[] arr) {
-//
-//        for (int i = arr.length; i > 0; i--) {
-//
-//            System.out.println(arr[i]);
-//        }
-//        return 0;
-//    }
+    }
+
+
+    //todo functie ce retueneaza pozitia minmului
+    public static int pozitiaMinimului(int[] arr) {
+        int min = arr[0];
+        int pozitie = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                pozitie = i;
+            }
+        }
+        return pozitie;
+    }
+
+    //todo: metoda2
+
+    public static int pozitiaMinimuluiMetoda2(int[] arr) {
+        int min = celMaiMicNr(arr);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == min) {
+
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    //todo fucntie ce returneaza pozitia maximului
+    public static int pozitiaMaximului(int[] arr) {
+        int max = arr[0];
+        int pozitie = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                pozitie = i;
+            }
+        }
+        return pozitie;
+    }
+
+    public static int pozitiaMaximuluiMetoda2(int[] arr) {
+        int max = celMaiMareNumar(arr);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == max) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    //todo:sa se afiseze toate numerele dintre maxim si minim
+
+    public static void intervalMinSiMax(int[] arr) {
+
+        int pozMin = pozitiaMinimului(arr);//3
+        int pozMax = pozitiaMaximului(arr);//1
+        int min = minim(pozMin, pozMax);//1
+        int max = maxim(pozMin, pozMax);//3
+
+        for (int i = min + 1; i < max; i++) {
+
+            System.out.print(arr[i] + " ");
+        }
+
+    }
 }
+
 
 
 

@@ -1,13 +1,13 @@
 package mycode;
 
-import static mycode.Functii.elementInterval;
-import static mycode.Functii.vector2;
+import static mycode.Functii.*;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        int[] vect1 = {21, 5241, 66, 11, 86, 32, 91, 52};
+        int[] vect1 = {213, 5241, -1, 86, 32, 11231123, 52};
+
 
         //    afisare(vect1);
         //   System.out.println("Numerele pare din lista sunt: "+numerePare(vect1));
@@ -21,6 +21,19 @@ public class Main {
 //        System.out.println(celMaiMicNr(vect1));
         //   System.out.println(diferentaNr(vect1));
       //  System.out.println(elementInterval(vect1));
-        System.out.println(vector2(vect1));
+
+     //   int[] sol=elementePare(vect1);
+
+     //   afisare(sol);
+
+     //   System.out.println(elementInterval(vect1));
+
+//       System.out.println(pozitiaMaximului(vect1));
+//      System.out.println(pozitiaMinimului(vect1));
+//        System.out.println(pozitiaMinimuluiMetoda2(vect1));
+//        System.out.println(pozitiaMaximuluiMetoda2(vect1));
+
+        intervalMinSiMax(vect1);
+
     }
 }
