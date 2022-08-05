@@ -305,7 +305,106 @@ public class Functii {
 
             System.out.print(arr[i] + " ");
         }
+    }
+//todo:Se dau n numere întregi. Determinaţi câte dintre numerele date apar o singură dată.
 
+    public static String numereUnice(int[] arr) {
+        int contor = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int aparitie = aparitieNr(arr, arr[i]);
+            if (aparitie == 1) {
+                contor++;
+            }
+        }
+        String solutie = "Sunt " + contor + " numere unice";
+        return solutie;
+    }
+//todo:Se citește un vector cu n elemente, numere naturale.
+// Să se afișeze elementele vectorului în următoarea ordine: primul, ultimul, al doilea, penultimul, etc.
+
+    public static void afisare2(int[] arr) {
+
+        for (int i = 0, j = arr.length - 1; i < j; i++, j--) {
+
+            System.out.print(arr[i] + " " + arr[j] + " ");
+        }
+    }
+
+    //TODO: sa se determine suma elementelor pozitive din vector
+// {12,43,-1,3,}
+    public static int sumaVectorilorPozitivi(int[] arr) {
+        int suma = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                suma = suma+arr[i];
+            }
+        }
+        return suma;
+    }
+
+    //todo: sa se afiseze elementele pozitive de rang impar dintr-un vector de numere intregi;
+
+    public static void elementeDeRangImpar(int [] arr){
+        int rangImpar = 0;
+        int pozitie = 0;
+        for(int i= 0;i<arr.length;i++){
+            if (i%2!=0&&arr[i]>0){
+
+                System.out.println(arr[i]);
+            }
+        }
+
+    }
+
+    //todo: Sa se scrie un program care numara elementele pozitive, negative si respectiv nule dintr-un vector,
+   // parcurcurgandu-l o singura data.
+
+    public static String sumaElemente(int[] arr) {
+        int numerePozitive = 0;
+        int numereNegative = 0;
+        int numereNule = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                numerePozitive++;
+            }
+            if (arr[i] < 0) {
+                numereNegative++;
+
+            }
+            if (arr[i] == 0) {
+                numereNule++;
+
+            }
+
+        }
+        String solutie = " Sunt " + numerePozitive + " numere pozitive " + " " + " Sunt " + numereNegative + " numere negaive " + " " + " Sunt " + numereNule + " numere nule";
+        return solutie;
+    }
+
+    //TODO: Sa se calculeze suma elementelor negative si de valoare para dintr-un vector de numere intregi.
+
+    public static String sumaElementelorPareNule(int[] arr) {
+        int solutie = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0 && arr[i] % 2 == 0) {
+                solutie = solutie + arr[i];
+            }
+        }
+        String rezulat = "Suma elementor pare nule este " + solutie;
+        return rezulat;
+    }
+//TODO: Scrieti un program care calculeaza produsul si numarul elementelor negative aflate pe pozitii impare in vector.
+
+    public static String problema9(int[] arr) {
+        int pozitieImpara = 1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0 && i % 2 != 0) {
+                pozitieImpara = arr[i];
+                pozitieImpara = pozitieImpara * i;
+            }
+        }
+        String solutie = "Rezultatul este : " + pozitieImpara;
+        return solutie;
     }
 }
 

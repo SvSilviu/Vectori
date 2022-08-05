@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int[] vect1 = {213, 5241, -1, 86, 32, 11231123, 52};
+        int[] vect1 = {1,-4, 5, -5, 5 };
 
 
         //    afisare(vect1);
@@ -33,7 +33,14 @@ public class Main {
 //        System.out.println(pozitiaMinimuluiMetoda2(vect1));
 //        System.out.println(pozitiaMaximuluiMetoda2(vect1));
 
-        intervalMinSiMax(vect1);
+ //       intervalMinSiMax(vect1);
+  //      System.out.println(numereUnice(vect1));
 
+  //      afisare2(vect1);
+   //     System.out.println(sumaVectorilorPozitivi(vect1));
+   //    elementeDeRangImpar(vect1);
+  //      System.out.println(sumaElemente(vect1));
+    //    System.out.println(sumaElementelorPareNule(vect1));
+        System.out.println(problema9(vect1));
     }
 }
